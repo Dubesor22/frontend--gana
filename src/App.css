@@ -1,3 +1,30 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background: rgb(0, 207, 167);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 207, 167, 0) 7%,
+    rgba(0, 207, 167, 1) 79%
+  );
+}
+
+h1 {
+  color: #111;
+  font-size: 4em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: #e1e23d;
+  border-color: #e1e23d;
+  color: rgb(32, 30, 30);
+  font-weight: bold;
+}
+
 .App {
   text-align: center;
 }

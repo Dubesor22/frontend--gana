@@ -9,7 +9,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <GlobalProvider>
-          <h1>Listado de Contratos</h1>
+          <h1 className="container">Contratos Gana Energia</h1>
+          <br />
           <Routes>
             <Route path="/" element={<Contratos />} />
             <Route path="/contrato/:_id" element={<EditContrato />} />

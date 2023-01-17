@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../../context/GlobalState";
 import { Link } from "react-router-dom";
+import { FaEdit } from "react-icons/fa";
+import { IoTrashOutline } from "react-icons/io5";
 
 const Contrato = () => {
   const { contratos, getContratos, deleteContrato } = useContext(GlobalContext);
@@ -40,16 +42,21 @@ const Contrato = () => {
               <td>{contrato.localidad}</td>
               <td>{contrato.telefono}</td>
               <td>
-                <button type="button" className="btn-primary btn-sm">
-                  <Link to={"/contrato/" + contrato._id}>Editar</Link>
+                <button type="button" className="btn btn-primary btn">
+                  <Link
+                    className="text-decoration-none text-black"
+                    to={"/contrato/" + contrato._id}
+                  >
+                    <FaEdit />
+                  </Link>
                 </button>
                 &nbsp; &nbsp;
                 <button
                   onClick={() => handleDelete(contrato._id)}
                   type="button"
-                  className="btn btn-primary btn-sm"
+                  className="btn btn-primary btn"
                 >
-                  Borrar
+                  <IoTrashOutline />
                 </button>
               </td>
             </tr>

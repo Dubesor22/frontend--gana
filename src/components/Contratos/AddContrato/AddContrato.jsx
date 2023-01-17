@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../../../context/GlobalState";
+import { AiOutlineFileAdd } from "react-icons/ai";
 
 const AddContrato = () => {
   const [formData, setFormData] = useState({ nombre: "", apellido1: "" });
@@ -25,7 +26,7 @@ const AddContrato = () => {
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
-          Añadir Contrato
+          <AiOutlineFileAdd />
         </button>
       </div>
 
@@ -132,7 +133,7 @@ const AddContrato = () => {
                   </button>
 
                   <button type="submit" className="btn btn-primary">
-                    Submit
+                    Registrar
                   </button>
                 </div>
               </form>

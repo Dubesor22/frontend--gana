@@ -4,9 +4,12 @@ import AddContrato from "./AddContrato/AddContrato";
 
 const Contratos = () => {
   return (
-    <div>
+    <div className="container">
       <AddContrato />
-      <Contrato />
+      <br />
+      <div className="container justify-content-center border shadow p-3 mb-5 bg-body-tertiary rounded">
+        <Contrato />
+      </div>
     </div>
   );
 };
