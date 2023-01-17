@@ -52,7 +52,7 @@ const AddContrato = () => {
             <div class="modal-body">
               <form className="container" onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label className="form-label">nombre</label>
+                  <label className="form-label">Nombre</label>
                   <input
                     type="text"
                     onChange={handleChange}
@@ -89,6 +89,36 @@ const AddContrato = () => {
                     name="documento"
                     className="form-control"
                     value={formData ? formData.documento : ""}
+                  />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">C.P.</label>
+                  <input
+                    type="text"
+                    onChange={handleChange}
+                    name="cp"
+                    className="form-control"
+                    value={formData ? formData.cp : ""}
+                  />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Localidad</label>
+                  <input
+                    type="text"
+                    onChange={handleChange}
+                    name="localidad"
+                    className="form-control"
+                    value={formData ? formData.localidad : ""}
+                  />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Telefono</label>
+                  <input
+                    type="text"
+                    onChange={handleChange}
+                    name="telefono"
+                    className="form-control"
+                    value={formData ? formData.telefono : ""}
                   />
                 </div>
 
