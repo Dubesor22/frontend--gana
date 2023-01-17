@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import App from "./App";
 
-import Formulario from "./components/Formulario/Formulario";
+// import Formulario from "./components/Formulario/Formulario";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Formulario />
+    <App />
   </React.StrictMode>
 );
