@@ -23,6 +23,12 @@ const contratos = (state, action) => {
         ...state,
         contrato: action.payload,
       };
+
+    case "GET_LOCALIDAD":
+      return {
+        ...state,
+        localidad: action.payload,
+      };
     default:
       return state;
   }

@@ -23,6 +23,7 @@ const EditContrato = () => {
 
   useEffect(() => {
     getContrato(_id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -42,6 +43,7 @@ const EditContrato = () => {
             value={formData.nombre || ""}
             name="nombre"
             className="form-control"
+            required
           />
         </div>
         <div className="mb-3">
@@ -54,6 +56,7 @@ const EditContrato = () => {
             value={formData.apellido1 || ""}
             name="apellido1"
             className="form-control"
+            required
           />
         </div>
         <div className="mb-3">
@@ -66,6 +69,7 @@ const EditContrato = () => {
             value={formData.apellido2 || ""}
             name="apellido2"
             className="form-control"
+            required
           />
         </div>
         <div className="mb-3">
@@ -78,6 +82,7 @@ const EditContrato = () => {
             value={formData.documento || ""}
             name="documento"
             className="form-control"
+            required
           />
         </div>
         <div className="mb-3">
@@ -88,6 +93,7 @@ const EditContrato = () => {
             value={formData.cp || ""}
             name="cp"
             className="form-control"
+            required
           />
         </div>
         <div className="mb-3">
@@ -100,6 +106,7 @@ const EditContrato = () => {
             value={formData.telefono || ""}
             name="telefono"
             className="form-control"
+            required
           />
         </div>
         <div className="d-flex justify-content-center">

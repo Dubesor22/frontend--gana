@@ -50,21 +50,33 @@ export const GlobalProvider = ({ children }) => {
   const getContrato = async (_id) => {
     try {
       const res = await axios.get("http://localhost:8080/contratos/" + _id);
-      console.log(res.data);
+
       dispatch({
         type: "GET_CONTRATO",
         payload: res.data,
       });
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
     }
   };
 
   const editContrato = async (_id, contrato) => {
     try {
       await axios.put("http://localhost:8080/contratos/" + _id, contrato);
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const getLocalidad = async (_cp) => {
+    try {
+      const res = await axios.get("http://localhost:8080/localidades/" + _cp);
+      dispatch({
+        type: "GET_LOCALIDAD",
+        payload: res.data,
+      });
+    } catch (err) {
+      console.error(err);
     }
   };
 
@@ -79,6 +91,7 @@ export const GlobalProvider = ({ children }) => {
         addContrato,
         getContrato,
         editContrato,
+        getLocalidad,
       }}
     >
       {children}

@@ -1,15 +1,32 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../../context/GlobalState";
 import { AiOutlineFileAdd } from "react-icons/ai";
 
 const AddContrato = () => {
-  const [formData, setFormData] = useState({ nombre: "", apellido1: "" });
+  const [formData, setFormData] = useState({
+    nombre: "",
+    apellido1: "",
+    apellido2: "",
+    documento: "",
+    cp: "",
+    localidad: "",
+    telefono: "",
+  });
 
   const { addContrato } = useContext(GlobalContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     addContrato(formData);
+    setFormData({
+      nombre: "",
+      apellido1: "",
+      apellido2: "",
+      documento: "",
+      cp: "",
+      localidad: "",
+      telefono: "",
+    });
   };
 
   const handleChange = (event) => {
@@ -40,7 +57,11 @@ const AddContrato = () => {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <h1
+                class="modal-title fs-5"
+                id="exampleModalLabel"
+                data-bs-dismiss="modal"
+              >
                 Añadir Contrato
               </h1>
               <button
@@ -60,6 +81,7 @@ const AddContrato = () => {
                     name="nombre"
                     className="form-control"
                     value={formData ? formData.nombre : ""}
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -70,6 +92,7 @@ const AddContrato = () => {
                     value={formData ? formData.apellido1 : ""}
                     name="apellido1"
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -80,6 +103,7 @@ const AddContrato = () => {
                     name="apellido2"
                     className="form-control"
                     value={formData ? formData.apellido2 : ""}
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -90,6 +114,7 @@ const AddContrato = () => {
                     name="documento"
                     className="form-control"
                     value={formData ? formData.documento : ""}
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -100,13 +125,13 @@ const AddContrato = () => {
                     name="cp"
                     className="form-control"
                     value={formData ? formData.cp : ""}
+                    required
                   />
                 </div>
                 <div className="mb-3">
                   <label className="form-label">Localidad</label>
                   <input
                     type="text"
-                    onChange={handleChange}
                     name="localidad"
                     className="form-control"
                     value={formData ? formData.localidad : ""}
@@ -120,6 +145,7 @@ const AddContrato = () => {
                     name="telefono"
                     className="form-control"
                     value={formData ? formData.telefono : ""}
+                    required
                   />
                 </div>
 
