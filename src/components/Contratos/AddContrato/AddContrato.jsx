@@ -50,7 +50,7 @@ const AddContrato = () => {
       <div className="container d-flex justify-content-start">
         <button
           type="button"
-          class="btn btn-primary"
+          class="btn btn-primary btn-lg"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
@@ -61,7 +61,6 @@ const AddContrato = () => {
         class="modal fade"
         id="exampleModal"
         tabindex="-1"
-        aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
         <div class="modal-dialog">
