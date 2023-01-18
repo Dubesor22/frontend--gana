@@ -174,7 +174,6 @@ const AddContrato = () => {
                   >
                     Cancelar
                   </button>
-
                   <button type="submit" className="btn btn-primary">
                     Registrar
                   </button>
