@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../../../context/GlobalState";
 import { AiOutlineFileAdd } from "react-icons/ai";
 
@@ -34,6 +34,17 @@ const AddContrato = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  useEffect(() => {
+    if (formData.cp.length === 5) {
+      fetch(`http://localhost:8080/localidades/${formData.cp}`)
+        .then((response) => response.json())
+        .then((data) =>
+          setFormData({ ...formData, localidad: data[0].municipio_nombre })
+        );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [formData.cp]);
+
   return (
     <>
       <div className="container d-flex justify-content-start">
@@ -46,7 +57,6 @@ const AddContrato = () => {
           <AiOutlineFileAdd />
         </button>
       </div>
-
       <div
         class="modal fade"
         id="exampleModal"
@@ -109,23 +119,29 @@ const AddContrato = () => {
                 <div className="mb-3">
                   <label className="form-label">Documento</label>
                   <input
+                    title="introduce 8 numeros y una letra"
+                    placeholder="introduce 8 numeros y una letra"
                     type="text"
                     onChange={handleChange}
                     name="documento"
                     className="form-control"
                     value={formData ? formData.documento : ""}
+                    pattern="^\d{8}[a-zA-Z]$"
                     required
                   />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">C.P.</label>
+                  <label className="form-label">Código Postal</label>
                   <input
+                    placeholder="Max. 5 digitos"
+                    className="form-control"
                     type="text"
+                    value={formData ? formData.cp : ""}
                     onChange={handleChange}
                     name="cp"
-                    className="form-control"
-                    value={formData ? formData.cp : ""}
                     required
+                    minLength="5"
+                    maxlength="5"
                   />
                 </div>
                 <div className="mb-3">
@@ -135,6 +151,7 @@ const AddContrato = () => {
                     name="localidad"
                     className="form-control"
                     value={formData ? formData.localidad : ""}
+                    readOnly
                   />
                 </div>
                 <div className="mb-3">
@@ -146,9 +163,10 @@ const AddContrato = () => {
                     className="form-control"
                     value={formData ? formData.telefono : ""}
                     required
+                    minLength="9"
+                    maxlength="13"
                   />
                 </div>
-
                 <div class="d-flex justify-content-evenly">
                   <button
                     type="button"

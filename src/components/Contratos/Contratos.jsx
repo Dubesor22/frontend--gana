@@ -1,7 +1,6 @@
 import React from "react";
 import Contrato from "./Contrato/Contrato";
 import AddContrato from "./AddContrato/AddContrato";
-import Cp from "./Cp/Cp";
 
 const Contratos = () => {
   return (
@@ -13,7 +12,6 @@ const Contratos = () => {
           <Contrato />
         </div>
       </div>
-      <Cp />
     </>
   );
 };

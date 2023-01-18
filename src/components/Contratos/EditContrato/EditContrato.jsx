@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { GlobalContext } from "../../../context/GlobalState";
+import { Link } from "react-router-dom";
 
 const EditContrato = () => {
   const { contrato, getContrato, editContrato } = useContext(GlobalContext);
@@ -10,6 +11,7 @@ const EditContrato = () => {
     apellido2: "",
     documento: "",
     cp: "",
+    localidad: "",
     telefono: "",
   });
   const { _id } = useParams();
@@ -97,6 +99,17 @@ const EditContrato = () => {
           />
         </div>
         <div className="mb-3">
+          <label className="form-label">Localidad</label>
+          <input
+            type="text"
+            onChange={(e) => setFormData({ ...formData, cp: e.target.value })}
+            value={formData.localidad || ""}
+            name="localidad"
+            className="form-control"
+            required
+          />
+        </div>
+        <div className="mb-3">
           <label className="form-label">telefono</label>
           <input
             type="text"
@@ -109,7 +122,11 @@ const EditContrato = () => {
             required
           />
         </div>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-evenly">
+          <button onClick={<Link to="/" />} className="btn btn-secondary">
+            Volver
+          </button>
+
           <button type="submit" className="btn btn-primary">
             Editar contrato
           </button>
