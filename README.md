@@ -58,7 +58,7 @@ Por último, en caso de querer correr en local, procede a levantar el servidor p
 npm run dev
 ```
 
-Y después en el proyecto de frontend, entras con cd redux-frontend-tripulaciones/ y una vez dentro de la carpeta, levantas el servidor:
+Y después en el proyecto de frontend, entras con cd frontend-gana y una vez dentro de la carpeta, levantas el servidor:
 
 ```
 npm start
