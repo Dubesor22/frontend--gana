@@ -50,7 +50,7 @@ const AddContrato = () => {
       <div className="container d-flex justify-content-start">
         <button
           type="button"
-          class="btn btn-primary btn-lg"
+          className="btn btn-primary btn-lg"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
@@ -58,16 +58,16 @@ const AddContrato = () => {
         </button>
       </div>
       <div
-        class="modal fade"
+        className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
               <h1
-                class="modal-title fs-5"
+                className="modal-title fs-5"
                 id="exampleModalLabel"
                 data-bs-dismiss="modal"
               >
@@ -75,12 +75,12 @@ const AddContrato = () => {
               </h1>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               <form className="container" onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label className="form-label">Nombre</label>
@@ -140,7 +140,7 @@ const AddContrato = () => {
                     name="cp"
                     required
                     minLength="5"
-                    maxlength="5"
+                    maxLength="5"
                   />
                 </div>
                 <div className="mb-3">
@@ -156,20 +156,20 @@ const AddContrato = () => {
                 <div className="mb-3">
                   <label className="form-label">Telefono</label>
                   <input
-                    type="text"
+                    type="number"
                     onChange={handleChange}
                     name="telefono"
                     className="form-control"
                     value={formData ? formData.telefono : ""}
                     required
                     minLength="9"
-                    maxlength="13"
+                    maxLength="13"
                   />
                 </div>
-                <div class="d-flex justify-content-evenly">
+                <div className="d-flex justify-content-evenly">
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                     data-bs-dismiss="modal"
                   >
                     Cancelar

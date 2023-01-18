@@ -112,22 +112,23 @@ const EditContrato = () => {
         <div className="mb-3">
           <label className="form-label">telefono</label>
           <input
-            type="text"
+            type="number"
             onChange={(e) =>
               setFormData({ ...formData, telefono: e.target.value })
             }
             value={formData.telefono || ""}
             name="telefono"
             className="form-control"
+            minLength="9"
+            maxLength="13"
             required
           />
         </div>
         <div className="d-flex justify-content-evenly">
-          <button onClick={<Link to="/" />} className="btn btn-secondary">
+          <Link to="/" className="fw-bold btn btn-secondary">
             Volver
-          </button>
-
-          <button type="submit" className="btn btn-primary">
+          </Link>
+          <button type="submit" className="bold btn btn-primary">
             Editar contrato
           </button>
         </div>

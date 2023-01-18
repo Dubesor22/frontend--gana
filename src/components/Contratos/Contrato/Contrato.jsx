@@ -19,7 +19,7 @@ const Contrato = () => {
   const contrato = contratos.map((contrato) => {
     return (
       <div className="contrato" key={contrato._id}>
-        <table className="table container">
+        <table className="container table container">
           <thead>
             <tr>
               <th scope="col">Nombre</th>

@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# <center>:deciduous_tree: Prueba técnica Gana Energía, Full Stack MERN :deciduous_tree:</center>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :clipboard: Índice :clipboard:
 
-## Available Scripts
+- [Sobre el proyecto](#bookmarktabs-sobre-el-proyecto-bookmarktabs)
 
-In the project directory, you can run:
+  - [Instalación y despliegue](#nutandbolt-instalación-y-despliegue)
 
-### `npm start`
+  - [Tecnologías utilizadas](#wrench-tecnologiaspackages-utilizados)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - [Motivación del mismo](#dart-origen)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - [Objetivos](#pushpin-objetivos)
 
-### `npm test`
+- [Descripción del proyecto](#greenbook-descripción-del-proyecto-greenbook)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - [API](#1-api)
 
-### `npm run build`
+- [Agradecimientos](#agradecimientos)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Autores](#raisedhands-autor-raisedhands)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# :bookmark_tabs: Sobre el proyecto :bookmark_tabs:
 
-### `npm run eject`
+Vistas previas:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![foto](./src/assets/escritorio.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![foto](./src/assets/nuevoregistro.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![foto](./src/assets/editar.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## :nut_and_bolt: Instalación y despliegue
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+El proyecto se subirá a un repositorio público de GitHub.
+Además, el backend procede de la API que hemos creado en MongoDB: [API](https://github.com/Dubesor22/backend-gana).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para instalar este proyecto debes hacer lo siguiente: primero acceder desde github a los dos repositorios y proceder a clonártelos con el siguiente comando:
 
-### Code Splitting
+```
+git clone https://github.com/Dubesor22/frontend-gana
+git clone https://github.com/Dubesor22/backend-gana
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Una vez clonado el repositorio es muy importante que en tu consola instales todos los npm que necesita cada proyecto con el siguiente comando:
 
-### Analyzing the Bundle Size
+```
+npm i
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Por último, en caso de querer correr en local, procede a levantar el servidor primero en el proyecto de backend con este comando:
 
-### Making a Progressive Web App
+```
+npm run dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Y después en el proyecto de frontend, entras con cd redux-frontend-tripulaciones/ y una vez dentro de la carpeta, levantas el servidor:
 
-### Advanced Configuration
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Automáticamente se te abrirá una nueva ventana del navegador con la página web.
 
-### Deployment
+Los repositorios estan actualmente programados para funcionar en local.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## :wrench: Tecnologías/packages utilizados
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Javascript
+- React
+- Bootstrap
+- Context
+- React Router
+- Axios
+- NodeJS
+- MongoDB
+- Mongoose
+- Font awesome
+- Dotenv
+- Postman
+
+---
+
+## :dart: Motivación
+
+El origen del proyecto es la creación de un MVP para una Prueba técnica, que consta de registrar contratos en una tabla con datos de usuarios y estos mismos poder editarlos o borrarlos (CRUD)
+
+Para ello he procedido a la creación tanto de Frontend como de Backend para poder guardar los datos en un BDD en mongo atlas. Y un front para poder hacer acopio de ellos mismos.
+
+Esta app tiene una vista general de página, en la que estará la tabla con los contratos y luego un modal para introducir nuevos usuarios y una vista en otra página para el edit.
+
+## :pushpin: Objetivos
+
+Objetivos de la prueba para el Frontend:
+
+- Crear una aplicación en React que permita visualizar, crear, editar y borrar contratos.
+
+- Formulario para dar de alta y modificar los datos de los contratos
+
+- Validación de los datos del formulario con campos requeridos.
+
+## 1. API
+
+Documentación en adicional de enpoints en Postman:
+
+```
+https://documenter.getpostman.com/view/21013501/2s8ZDVZNoK
+```
+
+---
+
+# :purple_heart: Agradecimientos :purple_heart:
+
+Agradecimientos a Gana Energía por dejarme participar en su proceso de selección.
+
+---
+
+# :raised_hands: Autor :raised_hands:
+
+- [David Úbeda Soriano](https://github.com/Dubesor22)
