@@ -37,7 +37,7 @@ Vistas previas:
 ## :nut_and_bolt: Instalación y despliegue
 
 El proyecto se subirá a un repositorio público de GitHub.
-Además, el backend procede de la API que hemos creado en MongoDB: [API](https://github.com/Dubesor22/backend-gana).
+Además, el backend procede de la API que he creado en MongoDB: [API](https://github.com/Dubesor22/backend-gana).
 
 Para instalar este proyecto debes hacer lo siguiente: primero acceder desde github a los dos repositorios y proceder a clonártelos con el siguiente comando:
 
